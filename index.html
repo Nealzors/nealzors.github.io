@@ -1,1496 +1,605 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="path/to/owl.carousel.min.css">
-    <link rel="stylesheet" href="path/to/owl.theme.default.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="path/to/jquery.min.js"></script>
-    <script src="path/to/owl.carousel.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-
-
-
-    <title>Document</title>
+    <title>Page title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="css/tailwind/tailwind.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="shuffle-for-tailwind.png">
+    <script src="js/main.js"></script>
 </head>
-
-<style>
-    body {
-        font-family: 'Poppins', sans-serif;
-    }
-
-    * {
-        box-sizing: border-box;
-        outline: 0 !important;
-        padding: 0px;
-        margin: 0px;
-    }
-
-
-
-    .custom-container {
-        max-width: 100%;
-        max-width: 1250px;
-        margin: auto;
-        padding: 0px 65px;
-
-    }
-
-
-    .custom-row {
-        display: flex;
-        margin-right: -15px;
-        margin-left: -15px;
-        justify-content: space-between;
-    }
-
-    .align-items-center {
-        align-items: center;
-    }
-
-
-    .custom-row>* {
-        flex-shrink: 0;
-        width: 100%;
-        max-width: 100%;
-        padding-right: 15px;
-        padding-left: 15px;
-
-    }
-
-    .col-mds-2 {
-        flex: 0 0 auto;
-        width: 16.66666667%;
-    }
-
-    .col-mds-3 {
-        flex: 0 0 auto;
-        width: 25%;
-    }
-
-    .col-mds-4 {
-        flex: 0 0 auto;
-        width: 33.33333333%;
-    }
-
-    .col-mds-5 {
-        flex: 0 0 auto;
-        width: 41.66666667%;
-    }
-
-    .col-mds-6 {
-        flex: 0 0 auto;
-        width: 50%;
-    }
-
-    .col-mds-7 {
-        flex: 0 0 auto;
-        width: 58.33333333%;
-    }
-
-    .col-mds-8 {
-        flex: 0 0 auto;
-        width: 66.66666667%;
-    }
-
-    .col-mds-9 {
-        flex: 0 0 auto;
-        width: 75%;
-    }
-
-    .col-mds-10 {
-        flex: 0 0 auto;
-        width: 83.33333333%;
-    }
-
-    .col-mds-11 {
-        flex: 0 0 auto;
-        width: 91.66666667%;
-    }
-
-    .col-mds-12 {
-        flex: 0 0 auto;
-        width: 100%;
-    }
-
-
-
-    .mb-0 {
-        margin-bottom: 0px !important;
-    }
-
-    .mt-0 {
-        margin-top: 0px !important;
-    }
-
-    .mb-3 {
-        padding: 8px 0px;
-    }
-
-    .mb-2 {
-        margin-bottom: 25px;
-    }
-
-    a {
-        text-decoration: none;
-        color: #3352b8;
-
-    }
-
-
-    .h1,
-    .h2,
-    .h3,
-    h1,
-    h2,
-    h3 {
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-
-    .h1,
-    .h2,
-    .h3,
-    .h4,
-    .h5,
-    .h6,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-
-        line-height: 1.1;
-    }
-
-    .blue-title {
-        color: #3D55A5;
-        font-weight: bold;
-    }
-
-    .blue-title {
-        color: #3D55A5;
-        font-weight: bold;
-        font-size: 28px;
-        margin-top: -45px;
-    }
-
-    /* navbar-section */
-    section.custom-navbar {
-        position: fixed;
-        z-index: 1;
-        width: 100%;
-        background-color: white;
-        border-bottom: black;
-        border-bottom: solid;
-        border-width: 1px;
-    }
-
-    .img-fluid {
-        max-width: 100%;
-    }
-
-    .menu-toggle-button,
-    .menu-close-button {
-        display: none;
-        cursor: pointer;
-        font-size: 24px;
-        background: none;
-    }
-
-    .bar-nav {
-        display: flex;
-        gap: 20px;
-    }
-
-
-    .navbartitles {
-        display: flex;
-        gap: 20px;
-        justify-content: flex-end;
-        text-align: center;
-        align-items: center;
-    }
-
-    .loginsignup {
-        /* padding-top: 4px; */
-        margin-top: -2px;
-    }
-
-    @media (max-width:1061px) {
-        .navbartitles {
-            display: flex;
-            gap: 5px;
-            justify-content: flex-end;
-            text-align: center;
-            align-items: center;
-        }
-
-        .bar-nav {
-            display: flex;
-            gap: 5px;
-        }
-
-    }
-
-    @media (max-width:991px) {
-        .custom-container {
-            max-width: 100%;
-            max-width: 1250px;
-            margin: auto;
-            padding: 0px 10px;
-        }
-
-        .bar-nav {
-            display: flex;
-            /* Show bar-nav on mobile screens */
-            flex-direction: column;
-            /* Stack items vertically */
-            position: absolute;
-            /* Position the menu absolutely */
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: #fff;
-            /* Adjust the background color as needed */
-            z-index: 1;
-            /* Ensure the menu appears above other elements */
-        }
-
-        .navbartitles {
-            flex-direction: column;
-            align-items: center;
-            padding: 25px;
-            gap: 20px;
-        }
-
-        .bar-nav {
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            display: none;
-        }
-
-        .menu-toggle-button {
-            display: block;
-        }
-
-        .loginnups {
-            background: white;
-            padding: 20px;
-            width: 100% !important;
-        }
-
-        .carddds-container .carddd {
-            background: #fff;
-            margin: 0 0px !important;
-            padding: 0 10px;
-            border-radius: 20px;
-            border: 0;
-        }
-
-        .flex {
-            display: flex;
-            gap: 20px;
-            padding-top: 9px;
-            padding-bottom: 9px;
-            justify-content: flex-end;
-        }
-
-    }
-
-    .flex {
-        display: flex;
-        gap: 20px;
-        padding-top: 9px;
-        padding-bottom: 0;
-        justify-content: flex-end;
-    }
-
-    img.img-fluid.logo {
-        width: 70%;
-        padding-top: 9px;
-        padding-bottom: 6px;
-    }
-
-    .login-blue {
-        padding: 10px 20px;
-        background-color: #3352b8;
-        border-radius: 5px;
-    }
-
-    .text-white {
-        color: white;
-        font-weight: bold;
-    }
-
-    .toggle-area {
-        position: relative;
-    }
-
-
-
-    @media (max-width: 768px) {
-
-        .bar-nav {
-            display: flex;
-            /* Show bar-nav on mobile screens */
-            flex-direction: column;
-            /* Stack items vertically */
-            position: absolute;
-            /* Position the menu absolutely */
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: #fff;
-            /* Adjust the background color as needed */
-            z-index: 1;
-            /* Ensure the menu appears above other elements */
-        }
-
-        .navbartitles {
-            flex-direction: column;
-            align-items: center;
-            padding: 10px;
-            /* Adjust spacing as needed */
-        }
-
-        .bar-nav {
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            display: none;
-        }
-
-        .menu-toggle-button {
-            display: inline-block;
-        }
-
-
-
-        .col-mds-5 {
-            width: 100%;
-        }
-
-        .col-mds-6 {
-            width: 100%;
-        }
-
-        .loginnups {
-            background: white;
-            padding: 0px !important;
-            width: 100% !important;
-        }
-
-        section.welcome-page {
-            background-image: none !important;
-            background-size: cover;
-            height: auto;
-            background-position: top;
-            padding: 110px 0px !important;
-            background-repeat: no-repeat;
-            width: 100%;
-        }
-
-        .welcome {
-            display: block;
-        }
-
-        ul.btn_list li {
-            display: inline-block;
-            padding-right: 0px !important;
-            margin-bottom: 8px;
-        }
-
-        ul.btn_list {
-            padding: 0px;
-            padding-top: 9px !important;
-        }
-
-        .custom-row.align-items-center {
-            display: block;
-        }
-
-        .bar-nav.show-menu {
-            display: flex;
-            /* Show the navigation links when the show-menu class is present */
-        }
-
-        img.img-fluid.logo {
-            width: 100%;
-            padding-top: 23px;
-            padding-bottom: 10px;
-
-        }
-
-        .col-mds-4 {
-            width: 100%;
-        }
-
-        .writting {
-            padding-bottom: 21px;
-        }
-
-        .custom-row.tread {
-            display: block;
-            text-align: center;
-        }
-
-        .custom-row.mobile {
-            display: block !important;
-        }
-
-        .owl-carousel.owl-carousel1.owl-theme {
-            display: inline-flex;
-            width: 500% !important;
-        }
-    }
-
-    /* welocme-page */
-    /* section.welcome-page {
-        background-image: url(img/banner.png);
-        background-size: cover;
-        height: 100%;
-        background-position: bottom;
-        padding-top: 51px;
-
-    } */
-    section.welcome-page {
-        background-image: url(img/banner.png);
-        background-size: cover;
-        height: auto;
-        background-position: bottom;
-        padding: 175px 0px;
-        background-repeat: no-repeat;
-        width: 100%;
-    }
-
-    .textarea {
-        padding-top: 0px;
-    }
-
-    .blacktitle {
-        padding-top: 8px;
-    }
-
-    .loginnups {
-        background: white;
-        padding: 20px;
-        width: 75%;
-    }
-
-    .form-fields {
-        padding: 20px 0px;
-        display: grid;
-    }
-
-    input#username {
-
-        border-width: 1px;
-        padding: 10px;
-        border-radius: 5px;
-        width: 100%;
-    }
-
-    input#password {
-
-        border-width: 1px;
-        padding: 10px;
-        border-radius: 5px;
-        width: 100%;
-    }
-
-    .center45 {
-        padding: 20px 0px;
-    }
-
-    button.fulllogin {
-        width: 100%;
-        padding: 10px;
-        background: #3352b8;
-        border: none;
-    }
-
-    a.get_started_btn.read {
-        color: white;
-    }
-
-    .signup__ {
-        text-align: center;
-    }
-
-    /* requirement */
-
-    button.ffff {
-        width: auto;
-        padding: 10px 25px;
-        background: #3352b8;
-        color: white;
-        border-radius: 5px;
-    }
-
-    section.requirement {
-        padding: 60px 0px;
-    }
-
-    .custom-row.rows {
-        display: block;
-        text-align: center;
-    }
-
-    .carddds-container {
-        position: relative;
-        margin-top: 30px;
-        overflow: hidden;
-    }
-
-    .carddds-container h2 {
-        font-size: 30px;
-        text-align: center;
-        color: #333;
-        margin-bottom: 50px;
-    }
-
-    .carddd-body {
-        text-align: center;
-        margin: 30px;
-    }
-
-    .carddds-container .owl-stage-outer {
-        padding: 30px 0;
-    }
-
-    .carddds-container .owl-nav {
-        display: none;
-    }
-
-    .carddds-container .owl-dots {
-        text-align: center;
-    }
-
-    .carddds-container .owl-dots span {
-        position: relative;
-        height: 10px;
-        width: 10px;
-        border-radius: 50%;
-        display: block;
-        background: #fff;
-        border: 2px solid #01b0f8;
-        margin: 0 5px;
-    }
-
-    .carddds-container .owl-dots .active {
-        box-shadow: none;
-    }
-
-    .carddds-container .owl-dots .active span {
-        background: #01b0f8;
-        box-shadow: none;
-        height: 12px;
-        width: 12px;
-        margin-bottom: -1px;
-    }
-
-    .carddds-container .carddd {
-        background: #fff;
-        margin: 0 20px;
-        padding: 0 10px;
-        border-radius: 20px;
-        border: 0;
-    }
-
-    .carddds-container .carddd .carddd-img-top {
-        max-width: 100px;
-        border-radius: 50%;
-        margin: 15px auto 0;
-        box-shadow: 0 8px 20px -4px #95abbb;
-        width: 100px;
-        height: 100px;
-
-    }
-
-    .imggg {
-        width: 160px;
-    }
-
-    .carddds-container .carddd h5 {
-        color: #01b0f8;
-        font-size: 21px;
-        line-height: 1.3;
-        text-align: start;
-    }
-
-    .carddds-container .carddd h5 span {
-        font-size: 18px;
-        color: #666;
-    }
-
-    .carddds-container .carddd p {
-        font-size: 14px;
-        color: #555;
-        padding-bottom: 15px;
-        text-align: start;
-    }
-
-    .carddds-container .active {
-        opacity: 0.5;
-        transition: all 0.3s;
-    }
-
-    .carddds-container .center {
-        opacity: 1;
-    }
-
-    .carddds-container .center h5 {
-        font-size: 24px;
-    }
-
-    .carddds-container .center h5 span {
-        font-size: 20px;
-    }
-
-    .carddds-container .center .carddd-img-top {
-        max-width: 100%;
-        height: 120px;
-        width: 120px;
-    }
-
-    @media (max-width: 767px) {
-
-
-        .carddds-container {
-            margin-top: 20px;
-        }
-    }
-
-    .owl-carousel .owl-nav button.owl-next,
-    .owl-carousel .owl-nav button.owl-prev {
-        outline: 0;
-    }
-
-    .owl-carousel button.owl-dot {
-        outline: 0;
-    }
-
-    .owl-carousel.owl-carousel1.owl-theme {
-        display: inline-flex;
-    }
-
-    /* we-course */
-    section.wre_course {
-        background-image: url(https://allnuud.com/static/media/slider1.7b69708421a78fd8359f.png);
-        padding: 60px 0px;
-        background-size: cover;
-        background-position: center;
-    }
-
-    h5.wre_title {
-        font-size: 20px;
-        color: #fff;
-        font-weight: bold;
-        max-width: 600px;
-        margin-top: 0px;
-        margin-bottom: 20px;
-    }
-
-    a.apply-now {
-        color: #3352b8;
-        border: 2px solid#3352b8;
-        padding: 8px 20px;
-        border-radius: 5px;
-        text-transform: uppercase;
-        text-decoration: unset;
-    }
-
-    a.apply-now:hover {
-        color: #f2f3f7;
-        border: 2px solid#f4f5f7;
-        padding: 8px 20px;
-        border-radius: 5px;
-        text-transform: uppercase;
-        text-decoration: unset;
-        background-color: #3352b8;
-    }
-
-    /* trade-makr */
-    section.trade_mark {
-        padding: 60px 0px;
-    }
-
-    .gray-text {
-        color: #3C3C3C;
-        font-weight: 600;
-        padding-bottom: 8px;
-    }
-
-    h4.toppadding {
-        font-size: 23px;
-        padding-bottom: 20px;
-    }
-
-    ul.btn_list {
-        padding: 0px;
-    }
-
-    ul.btn_list li {
-        display: inline-block;
-        padding-right: 2px;
-        margin-bottom: 2px;
-    }
-
-    ul.btn_list a {
-        background-color: #3C3C3C;
-        padding: 4px 10px;
-        border-radius: 8px;
-        display: inline-block;
-        color: #fff;
-        font-size: 12px;
-        text-decoration: unset;
-    }
-
-    .custom-row.mobile {
-        display: flex;
-        padding: 25px 0px;
-    }
-
-    .get_started_btnn {
-        background-color: #3D55A5;
-        color: #fff;
-        padding: 10px 20px;
-        border-radius: 5px;
-        max-width: 150px;
-        width: 100%;
-        display: inline-block;
-        text-align: center;
-        text-decoration: unset;
-    }
-
-    .white.mb-0 {
-        color: white;
-    }
-
-    .owl-carousel.owl-carousel1.owl-theme {
-        display: inline-flex;
-        width: 140%;
-    }
-
-    /* every-trade */
-    section.every-trade {
-        padding: 40px 0px;
-    }
-
-    .get-btn {
-        background-color: #3D55A5;
-        color: #fff;
-        padding: 10px 20px;
-        max-width: 150px;
-        width: 100%;
-        display: inline-block;
-        text-align: center;
-        border-radius: 30px;
-        text-decoration: unset;
-    }
-
-    /* treading */
-
-    .treanding {
-        padding: 60px 0px;
-    }
-
-    .dates-time {
-        border-top: 1px solid #585c68;
-        margin-top: 20px;
-        padding-top: 10px;
-        font-weight: bold;
-        color: #07090c;
-        margin-bottom: 0px;
-        padding-bottom: 5px;
-    }
-
-
-
-    .tread {
-        display: flex;
-        width: 100%;
-        transition: transform 0.5s ease-in-out;
-        overflow: hidden;
-    }
-
-
-
-    .tread img {
-        width: 100%;
-        height: auto;
-    }
-
-    .slider-dots {
-        display: flex;
-        justify-content: center;
-        margin-top: 10px;
-    }
-
-    .dot {
-        height: 5px;
-        width: 5px;
-        margin: 0 5px;
-        background-color: #bbb;
-        border-radius: 50%;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
-
-    .dot.active {
-        background-color: #717171;
-    }
-
-    .slider-dotss {
-        display: flex;
-        justify-content: center;
-        margin-top: 10px;
-    }
-
-    .dots {
-        height: 5px;
-        width: 5px;
-        margin: 0 5px;
-        background-color: #bbb;
-        border-radius: 50%;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
-
-    .dots.active {
-        background-color: #717171;
-    }
-
-
-
-
-
-    /* footer */
-
-    .custom-footer {
-        padding: 60px 0px;
-    }
-
-    .searchbar-text {
-        padding: 10px 0px;
-        text-align: center;
-    }
-
-    input.search-input {
-        padding: 10px 12px;
-    }
-
-    button.search-buttonn {
-        padding: 10px 6px;
-        margin-left: -4px;
-        background-color: #3352b8;
-        color: white;
-        font-weight: bold;
-        border-radius: 5px;
-    }
-
-    .footermenu {
-        display: flex;
-        gap: 50px;
-        padding: 15px 14px;
-        justify-content: space-between;
-
-    }
-
-    .texttt {
-        padding-top: 20px;
-    }
-
-    .custom-row.mobile {
-        display: flex;
-    }
-
-    .contact.us {
-        padding: 20px;
-    }
-
-    li.footer-list {
-        list-style: none;
-        padding: 7px 0px;
-        color: black;
-    }
-</style>
-
-
-<body>
-    <section class="custom-navbar">
-        <div class="custom-container">
-            <div class="custom-row">
-                <div class="col-mds-2">
-                    <img class="img-fluid logo"
-                        src="https://resources.allnuud.com/wp-content/uploads/2023/09/imgpsh_fullsize_anim.png" alt="">
+<body class="antialiased bg-body text-body font-body">
+    <div class="">
+                
+      <section class="overflow-hidden" style="background: url(gradia-assets/images/hero/bg.png) no-repeat; background-size: cover;">
+        <section>
+          <div class="flex items-center justify-between px-8 py-5">
+            <div class="w-auto">
+              <div class="flex flex-wrap items-center">
+                <div class="w-auto mr-14">
+                  <a href="#">
+                    <img src="images/gram-65.png" alt="">
+                  </a>
                 </div>
-                <!-- <div class="custom-container"> -->
-                <div class="col-mds-10">
-                    <div class="flex">
-                        <div class="toggle-area">
-                            <button class="menu-toggle-button" onclick="toggleMenu()">☰</button>
-                            <button class="menu-close-button" id="closeButton" onclick="closeMenu()">✖</button>
-                        </div>
-                        <div class="bar-nav">
-                            <div class="navbartitles">
-                                <a href="">
-                                    <p class="textbold">COMMUNITY</p>
-                                </a>
-                                <a href="">
-                                    <p class="textbold">TRADE PROGRESS</p>
-                                </a>
-                                <a href="">
-                                    <p class="textbold">TRADE JOB</p>
-                                </a>
-                                <a href="">
-                                    <p class="textbold">NEWS & ARTICLES</p>
-                                </a>
-                            </div>
-                            <div class="loginsignup">
-                                <button class="login-blue"><a href="#">
-                                        <p class=" textbold text-white">LOGIN</p>
-                                    </a></button>
-
-                                <button class="login-blue" style="background-color: white;">
-                                    <a href="#">
-                                        <p class=" textbold text-white" style="color: #3352b8;">SIGNUP</p>
-                                    </a>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
+            <div class="w-auto">
+              <div class="flex flex-wrap items-center">
+                <div class="w-auto hidden lg:block">
+                  <ul class="flex items-center mr-10">
+                    <li class="font-heading mr-9 text-white hover:text-gray-200 text-lg"><a href="#">Features</a></li>
+                    <li class="font-heading mr-9 text-white hover:text-gray-200 text-lg"><a href="#">Pricing</a></li>
+                    <li class="font-heading mr-9 text-white hover:text-gray-200 text-lg"><a href="#">FAQ</a></li>
+                    <li class="font-heading text-white hover:text-gray-200 text-lg"><a href="#">Contact Us</a></li>
+                  </ul>
+                </div>
+                <div class="w-auto hidden lg:block">
+                  <button class="group relative font-heading block py-2 px-5 text-lg text-white border-2 border-white overflow-hidden rounded-10">
+                    <div class="absolute top-0 left-0 transform -translate-y-full group-hover:-translate-y-0 h-full w-full bg-white transition ease-in-out duration-500"></div>
+                    <p class="relative z-10 group-hover:text-gray-800">Start Now</p>
+                  </button>
+                </div>
+                <div class="w-auto lg:hidden">
+                  <a href="#">
+                    <svg class="navbar-burger text-gray-800" width="51" height="51" viewbox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="56" height="56" rx="28" fill="currentColor"></rect>
+                      <path d="M37 32H19M37 24H19" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hidden navbar-menu fixed top-0 left-0 bottom-0 w-4/6 sm:max-w-xs z-50">
+            <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-80"></div>
+            <nav class="relative z-10 px-9 py-8 bg-white h-full">
+              <div class="flex flex-wrap justify-between h-full">
+                <div class="w-full">
+                  <div class="flex items-center justify-between -m-2">
+                    <div class="w-auto p-2">
+                      <a class="inline-block" href="#">
+                        <img src="gradia-assets/logos/gradia-name-black.svg" alt="">
+                      </a>
+                    </div>
+                    <div class="w-auto p-2">
+                      <a class="navbar-burger" href="#">
+                        <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6 18L18 6M6 6L18 18" stroke="#111827" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-col justify-center py-8 w-full">
+                  <ul>
+                    <li class="mb-12"><a class="font-heading font-medium text-lg text-gray-900 hover:text-gray-700" href="#">Features</a></li>
+                    <li class="mb-12"><a class="font-heading font-medium text-lg text-gray-900 hover:text-gray-700" href="#">Solutions</a></li>
+                    <li class="mb-12"><a class="font-heading font-medium text-lg text-gray-900 hover:text-gray-700" href="#">Resources</a></li>
+                    <li><a class="font-heading font-medium text-lg text-gray-900 hover:text-gray-700" href="#">Pricing</a></li>
+                  </ul>
+                </div>
+                <div class="flex flex-col justify-end w-full">
+                  <div class="flex flex-wrap">
+                    <div class="w-full">
+                      <button class="p-0.5 font-heading block w-full text-lg text-gray-900 font-medium rounded-10">
+                        <div class="py-2 px-5 rounded-10">
+                          <p>Login</p>
+                        </div>
+                      </button>
+                    </div>
+                    <div class="w-full">
+                      <button class="group relative p-0.5 font-heading block w-full text-lg text-gray-900 font-medium bg-gradient-cyan overflow-hidden rounded-10">
+                        <div class="absolute top-0 left-0 transform -translate-y-full group-hover:-translate-y-0 h-full w-full bg-gradient-cyan transition ease-in-out duration-500"></div>
+                        <div class="py-2 px-5 bg-white rounded-lg">
+                          <p class="relative z-10">Start Free Trial</p>
+                        </div>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </section>
+        <div class="container mx-auto px-4">
+          <div class="flex flex-wrap justify-between -m-6 pt-32 pb-40">
+            <div class="w-full lg:w-5/12 xl:w-1/2 p-6">
+              <p class="mb-5 font-heading text-gray-400 font-medium text-xl">The #1 Short-Form Content Reposting Service</p>
+              <h1 class="mb-14 font-heading text-7xl md:text-9xl xl:text-11xl text-white font-bold">Go Viral.
+      Gain not only Followers But Fans.</h1>
+              <div class="flex flex-wrap -m-3 mb-20">
+                <div class="w-full lg:w-auto p-3">
+                  <button class="font-heading w-full px-6 py-4 text-base text-gray-900 bg-white hover:bg-gray-100 rounded-md">Get Started Now!</button>
+                </div>
+                <div class="w-full lg:w-auto p-3">
+                  <button class="font-heading w-full px-6 py-4 text-base text-white bg-transparent border border-gray-500 hover:border-gray-600 rounded-md">How it works</button>
+                </div>
+              </div>
+              <div class="lg:max-w-md">
+                <div class="flex flex-wrap -m-3">
+                  <div class="w-auto p-3">
+                    <img class="w-14 h-14" src="gradia-assets/images/hero/avatar-man.png" alt="">
+                  </div>
+                  <div class="flex-1 p-3">
+                    <p class="mb-4 text-gray-300 text-base">“You made it so simple. We were having a lot of trouble with growing our short-form content. I wish we knew about this service earlier.”</p>
+                    <p class="font-heading text-white text-base">Denny Jones, founder of Growthio</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-full lg:w-7/12 xl:w-1/2 p-6">
+              <div class="max-w-max mx-auto">
+                <div class="flex flex-wrap justify-center -m-3 mb-3">
+                  <div class="w-full p-3">
+                    <div class="mx-auto w-64 p-3 bg-white transform hover:-translate-y-3 transition ease-out duration-1000 rounded-2xl">
+                      <div class="flex flex-wrap -m-2">
+                        <div class="w-auto p-2">
+                          <img src="gradia-assets/images/hero/avatar-circle.png" alt="">
+                        </div>
+                        <div class="w-auto p-2">
+                          <p class="font-heading text-base text-gray-900">Albert Flores</p>
+                          <p class="mb-2 text-sm text-gray-500">I owe a lot of our affiliate marketing success to ViralReload</p>
+                          <div class="flex items-center px-2 py-1 bg-gray-100 rounded-full">
+                            <svg class="mr-1" width="13" height="13" viewbox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M9.56413 9.02246C9.19416 9.39243 8.5298 10.0568 7.91404 10.6726C7.13299 11.4536 5.867 11.4536 5.08595 10.6725C4.4823 10.0689 3.82786 9.41446 3.43587 9.02246C1.7436 7.33019 1.7436 4.58648 3.43587 2.8942C5.12814 1.20193 7.87185 1.20193 9.56413 2.8942C11.2564 4.58648 11.2564 7.33019 9.56413 9.02246Z" stroke="#71717A" stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path d="M8.125 5.95833C8.125 6.8558 7.39746 7.58333 6.5 7.58333C5.60253 7.58333 4.875 6.8558 4.875 5.95833C4.875 5.06087 5.60253 4.33333 6.5 4.33333C7.39746 4.33333 8.125 5.06087 8.125 5.95833Z" stroke="#71717A" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                            <p class="text-xs text-gray-700 font-medium">Ohio, USA</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-wrap justify-center max-w-max -m-3 mb-3">
+                  <div class="w-full sm:w-1/2 p-3">
+                    <div class="mx-auto w-64 p-3 bg-white transform hover:-translate-y-3 transition ease-out duration-1000 rounded-2xl">
+                      <div class="flex flex-wrap -m-2">
+                        <div class="w-auto p-2">
+                          <img src="gradia-assets/images/hero/avatar-circle2.png" alt="">
+                        </div>
+                        <div class="w-auto p-2">
+                          <p class="font-heading text-base text-gray-900">Darlene Robertson</p>
+                          <p class="mb-2 text-sm text-gray-500">"Helped me turn my side hussle into my main job!"</p>
+                          <div class="flex items-center px-2 py-1 bg-gray-100 rounded-full">
+                            <svg class="mr-1" width="13" height="13" viewbox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M9.56413 9.02246C9.19416 9.39243 8.5298 10.0568 7.91404 10.6726C7.13299 11.4536 5.867 11.4536 5.08595 10.6725C4.4823 10.0689 3.82786 9.41446 3.43587 9.02246C1.7436 7.33019 1.7436 4.58648 3.43587 2.8942C5.12814 1.20193 7.87185 1.20193 9.56413 2.8942C11.2564 4.58648 11.2564 7.33019 9.56413 9.02246Z" stroke="#71717A" stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path d="M8.125 5.95833C8.125 6.8558 7.39746 7.58333 6.5 7.58333C5.60253 7.58333 4.875 6.8558 4.875 5.95833C4.875 5.06087 5.60253 4.33333 6.5 4.33333C7.39746 4.33333 8.125 5.06087 8.125 5.95833Z" stroke="#71717A" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                            <p class="text-xs text-gray-700 font-medium">New York, USA</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="w-full sm:w-1/2 p-3">
+                    <div class="mx-auto w-64 p-3 bg-white transform hover:-translate-y-3 transition ease-out duration-1000 rounded-2xl">
+                      <div class="flex flex-wrap -m-2">
+                        <div class="w-auto p-2">
+                          <img src="gradia-assets/images/hero/avatar-circle3.png" alt="">
+                        </div>
+                        <div class="w-auto p-2">
+                          <p class="font-heading text-base text-gray-900">Kris Watson</p>
+                          <p class="mb-2 text-sm text-gray-500">"They seem to care and they listen, they always respond to my emails right away and keep me posted."</p>
+                          <div class="flex items-center px-2 py-1 bg-gray-100 rounded-full">
+                            <svg class="mr-1" width="13" height="13" viewbox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M9.56413 9.02246C9.19416 9.39243 8.5298 10.0568 7.91404 10.6726C7.13299 11.4536 5.867 11.4536 5.08595 10.6725C4.4823 10.0689 3.82786 9.41446 3.43587 9.02246C1.7436 7.33019 1.7436 4.58648 3.43587 2.8942C5.12814 1.20193 7.87185 1.20193 9.56413 2.8942C11.2564 4.58648 11.2564 7.33019 9.56413 9.02246Z" stroke="#71717A" stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path d="M8.125 5.95833C8.125 6.8558 7.39746 7.58333 6.5 7.58333C5.60253 7.58333 4.875 6.8558 4.875 5.95833C4.875 5.06087 5.60253 4.33333 6.5 4.33333C7.39746 4.33333 8.125 5.06087 8.125 5.95833Z" stroke="#71717A" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                            <p class="text-xs text-gray-700 font-medium">Berlin, Germany</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-wrap justify-center max-w-max -m-3 mb-3 xl:-ml-20">
+                  <div class="w-full sm:w-1/2 p-3">
+                    <div class="mx-auto w-64 p-3 bg-white transform hover:-translate-y-3 transition ease-out duration-1000 rounded-2xl">
+                      <div class="flex flex-wrap -m-2">
+                        <div class="w-auto p-2">
+                          <img src="gradia-assets/images/hero/avatar-circle4.png" alt="">
+                        </div>
+                        <div class="w-auto p-2">
+                          <p class="font-heading text-base text-gray-900">Guy Hawkins</p>
+                          <p class="mb-2 text-sm text-gray-500">"Highly recommend. Insane targeted growth. Took a semi active niche page of mine to high engagement."</p>
+                          <div class="flex items-center px-2 py-1 bg-gray-100 rounded-full">
+                            <svg class="mr-1" width="13" height="13" viewbox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M9.56413 9.02246C9.19416 9.39243 8.5298 10.0568 7.91404 10.6726C7.13299 11.4536 5.867 11.4536 5.08595 10.6725C4.4823 10.0689 3.82786 9.41446 3.43587 9.02246C1.7436 7.33019 1.7436 4.58648 3.43587 2.8942C5.12814 1.20193 7.87185 1.20193 9.56413 2.8942C11.2564 4.58648 11.2564 7.33019 9.56413 9.02246Z" stroke="#71717A" stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path d="M8.125 5.95833C8.125 6.8558 7.39746 7.58333 6.5 7.58333C5.60253 7.58333 4.875 6.8558 4.875 5.95833C4.875 5.06087 5.60253 4.33333 6.5 4.33333C7.39746 4.33333 8.125 5.06087 8.125 5.95833Z" stroke="#71717A" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                            <p class="text-xs text-gray-700 font-medium">Melbourne, Australia</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="w-full sm:w-1/2 p-3">
+                    <div class="mx-auto w-64 p-3 bg-white transform hover:-translate-y-3 transition ease-out duration-1000 rounded-2xl">
+                      <div class="flex flex-wrap -m-2">
+                        <div class="w-auto p-2">
+                          <img src="gradia-assets/images/hero/avatar-circle5.png" alt="">
+                        </div>
+                        <div class="w-auto p-2">
+                          <p class="font-heading text-base text-gray-900">Annette Black</p>
+                          <p class="mb-2 text-sm text-gray-500">"Unlike other services or apps, ViralReload actually cares about helping you grow your account"</p>
+                          <div class="flex items-center px-2 py-1 bg-gray-100 rounded-full">
+                            <svg class="mr-1" width="13" height="13" viewbox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M9.56413 9.02246C9.19416 9.39243 8.5298 10.0568 7.91404 10.6726C7.13299 11.4536 5.867 11.4536 5.08595 10.6725C4.4823 10.0689 3.82786 9.41446 3.43587 9.02246C1.7436 7.33019 1.7436 4.58648 3.43587 2.8942C5.12814 1.20193 7.87185 1.20193 9.56413 2.8942C11.2564 4.58648 11.2564 7.33019 9.56413 9.02246Z" stroke="#71717A" stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path d="M8.125 5.95833C8.125 6.8558 7.39746 7.58333 6.5 7.58333C5.60253 7.58333 4.875 6.8558 4.875 5.95833C4.875 5.06087 5.60253 4.33333 6.5 4.33333C7.39746 4.33333 8.125 5.06087 8.125 5.95833Z" stroke="#71717A" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                            <p class="text-xs text-gray-700 font-medium">North Dakota, USA</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-wrap justify-center max-w-max -m-3">
+                  <div class="w-full sm:w-1/2 p-3">
+                    <div class="mx-auto w-64 p-3 bg-white transform hover:-translate-y-3 transition ease-out duration-1000 rounded-2xl">
+                      <div class="flex flex-wrap -m-2">
+                        <div class="w-auto p-2">
+                          <img src="images/464-4644512-circle-avatar-picture-png-transparent-png-1-42x44.png" alt="">
+                        </div>
+                        <div class="w-auto p-2">
+                          <p class="font-heading text-base text-gray-900">Rebecca Fox</p>
+                          <p class="mb-2 text-sm text-gray-500">"My personal brand would not be where it is today without ViralReload!"</p>
+                          <div class="flex items-center px-2 py-1 bg-gray-100 rounded-full">
+                            <svg class="mr-1" width="13" height="13" viewbox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M9.56413 9.02246C9.19416 9.39243 8.5298 10.0568 7.91404 10.6726C7.13299 11.4536 5.867 11.4536 5.08595 10.6725C4.4823 10.0689 3.82786 9.41446 3.43587 9.02246C1.7436 7.33019 1.7436 4.58648 3.43587 2.8942C5.12814 1.20193 7.87185 1.20193 9.56413 2.8942C11.2564 4.58648 11.2564 7.33019 9.56413 9.02246Z" stroke="#71717A" stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path d="M8.125 5.95833C8.125 6.8558 7.39746 7.58333 6.5 7.58333C5.60253 7.58333 4.875 6.8558 4.875 5.95833C4.875 5.06087 5.60253 4.33333 6.5 4.33333C7.39746 4.33333 8.125 5.06087 8.125 5.95833Z" stroke="#71717A" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                            <p class="text-xs text-gray-700 font-medium">Maine, USA</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="w-full sm:w-1/2 p-3">
+                    <div class="mx-auto w-64 p-3 bg-white transform hover:-translate-y-3 transition ease-out duration-1000 rounded-2xl">
+                      <div class="flex flex-wrap -m-2">
+                        <div class="w-auto p-2">
+                          <img src="images/622fa2005a5fabed64659616-607d8ea5221240c8618ea3d1-Kirk-Du-Plessis-Avatar-1-42x44.png" alt="">
+                        </div>
+                        <div class="w-auto p-2">
+                          <p class="font-heading text-base text-gray-900">Cody Fisher</p>
+                          <p class="mb-2 text-sm text-gray-500">"Not just the amount of exposure but the quality is why I love this service."</p>
+                          <div class="flex items-center px-2 py-1 bg-gray-100 rounded-full">
+                            <svg class="mr-1" width="13" height="13" viewbox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M9.56413 9.02246C9.19416 9.39243 8.5298 10.0568 7.91404 10.6726C7.13299 11.4536 5.867 11.4536 5.08595 10.6725C4.4823 10.0689 3.82786 9.41446 3.43587 9.02246C1.7436 7.33019 1.7436 4.58648 3.43587 2.8942C5.12814 1.20193 7.87185 1.20193 9.56413 2.8942C11.2564 4.58648 11.2564 7.33019 9.56413 9.02246Z" stroke="#71717A" stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path d="M8.125 5.95833C8.125 6.8558 7.39746 7.58333 6.5 7.58333C5.60253 7.58333 4.875 6.8558 4.875 5.95833C4.875 5.06087 5.60253 4.33333 6.5 4.33333C7.39746 4.33333 8.125 5.06087 8.125 5.95833Z" stroke="#71717A" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                            <p class="text-xs text-gray-700 font-medium">Alaska, USA</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
-    <section class="welcome-page">
-        <div class="custom-container">
-            <div class="custom-row welcome">
-                <div class="col-mds-4">
-                    <div class="textarea">
-                        <div class="blue-title">
-                            Welcome To The Builders' Ecosystem
-                        </div>
-                        <div class="blacktitle">
-                            <p>Find Institute Jobs Courses and more</p>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-mds-5">
-                    <div class="loginnups">
-                        <div class="form-fields">
-                            <!-- <label for="username">Username</label> -->
-                            <input id="username" name="name" type="text" placeholder="Username" autocomplete="off"
-                                autofocus>
-                        </div>
-                        <div class="form-fields">
-                            <!-- <label for="password">Password</label> -->
-                            <input id="password" name="name" type="password" placeholder="Password" autocomplete="off">
-                        </div>
-                        <div class="terms">
-                            <div>
-                                <a href="http://community.allnuud.com/forgot-password" class="main">Forgot
-                                    Password?</a>
-                            </div>
-                        </div>
-                        <div class="login_signup_combo">
-                            <div class="center45">
-                                <button class="fulllogin"><a href="" class="get_started_btn read ">Log In</a></button>
-                            </div>
-                            <div class="signup__">
-                                <p>New User
-                                    <button style="padding: 8px; border-radius: 5px; border-width:1px;"><a
-                                            class="dec main"
-                                            href="http://community.allnuud.com/register">SIGNUP</a></button>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
+      </section>
+                
+      <section class="py-24 overflow-hidden"><div class="container mx-auto px-4">
+          <p class="mb-12 text-lg text-gray-900">Join 6k+ other clients who use ViralReload</p>
+          <div class="flex flex-wrap -m-6 divide-x divide-gray-200">
+            <div class="w-full md:w-1/2 p-6">
+              <div class="flex flex-wrap -m-8">
+                <div class="w-auto p-8">
+                  <img src="images/timesmall.jpg" alt="">
+      </div>
+                <div class="w-auto p-8">
+                  <img src="images/vicesmall.jpg" alt="">
+      </div>
+      
+                <div class="w-auto p-8">
+                  <img src="images/tcsmall.jpg" alt="">
+      </div>
+                <div class="w-auto p-8">
+                  <img src="images/forbessmall.jpg" alt="">
+      </div>
+              </div>
             </div>
+            <div class="w-full md:w-1/2 p-6">
+              <div class="max-w-max md:mx-auto">
+                <img class="mb-5" src="images/gram-65.png" alt=""><p class="mb-2.5 font-heading font-semibold text-lg text-gray-900">Trusted by 6k+ customers</p>
+                <div class="flex flex-wrap items-center -m-1">
+                  <div class="w-auto p-1">
+                    <div class="flex items-center -m-1">
+                      <img class="p-1" src="gradia-assets/elements/logos/star2.svg" alt=""><img class="p-1" src="gradia-assets/elements/logos/star2.svg" alt=""><img class="p-1" src="gradia-assets/elements/logos/star2.svg" alt=""><img class="p-1" src="gradia-assets/elements/logos/star2.svg" alt=""><img class="p-1" src="gradia-assets/elements/logos/star2.svg" alt="">
+      </div>
+                  </div>
+                  <div class="w-auto p-1">
+                    <p class="font-heading font-medium text-base text-gray-900">
+                      <span>4.7/5</span>
+                      <span class="font-heading font-medium text-base text-gray-500">(1.7k Reviews)</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
-    <section class="requirement">
-        <div class="custom-container">
-            <div class="custom-row rows">
-                <div class="blue-title center">
-                    Post any Trade Job Requirement
-                </div>
-                <div class="custom-row">
-                    <div class="blacktitle">
-                        <p>Post your job for millions of creators</p>
-                    </div>
-                </div>
+      </section>
+                
+      <section class="relative pt-28 pb-36 bg-black overflow-hidden">
+        <div class="container mx-auto px-4">
+          <p class="mb-6 font-heading text-xs text-gray-400 text-center uppercase tracking-px">The features that made us special</p>
+          <h2 class="mb-20 max-w-xl mx-auto font-heading font-semibold text-center text-6xl sm:text-7xl text-white">Three Simple Steps To Get Started</h2>
+          <div class="flex flex-wrap -m-4">
+            <div class="w-full md:w-1/3 p-4">
+              <div class="h-full p-9 bg-gray-800 rounded-10">
+                <img class="mb-12" src="gradia-assets/elements/features/users2.svg" alt="">
+                <h3 class="font-heading font-bold text-white text-2xl">
+                  <span class="text-transparent bg-clip-text bg-gradient-cyan">Identify</span>
+                  <span>Sign up and tell Us About Your Audience: Let us know what kind of audience and followers you’re targeting – age, demographic, location, gender, etc.</span>
+                </h3>
+              </div>
             </div>
-            <div class="custom-row rows">
-                <div class="carddds-container">
-                    <div class="owl-carousel owl-carousel1 owl-theme">
-                        <div class="item">
-                            <div class="carddd text-center">
-                                <img class="carddd-img-top" src="https://pngimg.com/d/number1_PNG14891.png" alt="">
-                                <div class="carddd-body">
-                                    <h5>Anna Deynah <br />
-                                        <span> Project Manager </span>
-                                    </h5>
-                                    <p class="carddd-text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                        Aliquam et dictum sem.” </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="carddd text-center">
-                                <img class="carddd-img-top"
-                                    src="https://www.freepnglogos.com/uploads/number-2-png/number-2-number-two-svg-png-icon-download-6.png"
-                                    alt="">
-                                <div class="carddd-body">
-                                    <h5>Anna Deynah<br />
-                                        <span> Engineer </span>
-                                    </h5>
-                                    <p class="carddd-text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                        Aliquam et dictum sem.” </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="carddd text-center">
-                                <img class="carddd-img-top"
-                                    src="https://e7.pngegg.com/pngimages/1018/556/png-clipart-computer-icons-number-3-text-logo-thumbnail.png"
-                                    alt="">
-                                <div class="carddd-body">
-                                    <h5>Anna Deynah<br />
-                                        <span> Project Manager </span>
-                                    </h5>
-                                    <p class="carddd-text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                        Aliquam et dictum sem.” </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="carddd text-center">
-                                <img class="carddd-img-top"
-                                    src="https://cdn-icons-png.flaticon.com/512/6913/6913369.png" alt="">
-                                <div class="carddd-body">
-                                    <h5>Anna Deynah<br />
-                                        <span> Project Manager </span>
-                                    </h5>
-                                    <p class="carddd-text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                        Aliquam et dictum sem.” </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slider-dotss"></div>
+            <div class="w-full md:w-1/3 p-4">
+              <div class="h-full p-9 bg-gray-800 rounded-10">
+                <img class="mb-12" src="gradia-assets/elements/features/sm-view-grid-add.svg" alt="">
+                <h3 class="font-heading font-bold text-white text-2xl">
+                  <span class="text-transparent bg-clip-text bg-gradient-orange">Promote</span>
+                  <span>ViralReload downloads your content and promotes your content organically on high quality accounts to your target Tiktok audiences.</span>
+                </h3>
+              </div>
+            </div>
+            <div class="w-full md:w-1/3 p-4">
+              <div class="h-hull p-9 bg-gray-800 rounded-10">
+                <img class="mb-12" src="gradia-assets/elements/features/finger-print2.svg" alt="">
+                <h3 class="font-heading font-bold text-white text-2xl">
+                  <span class="text-transparent bg-clip-text bg-gradient-green">Engage</span>
+                  <span>You get High Quality Followers: Those who like your content follow your profile, resulting in real, high quality, engaged followers.</span>
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+                
+      <section class="relative py-20 bg-black overflow-hidden">
+        <img class="w-full h-full absolute top-1/2 left-3/4 transform -translate-y-1/2 -translate-x-3/4" src="gradia-assets/elements/cta/radial2.png" alt="">
+        <div class="relative z-10 container mx-auto px-4">
+          <div class="flex flex-wrap items-center justify-between -m-6">
+            <div class="w-full md:w-1/2 p-6">
+              <div class="md:max-w-xl">
+                <h2 class="font-heading font-bold text-white text-6xl sm:text-7xl">Going Viral is Just One Click Away</h2>
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 p-6">
+              <div class="flex flex-wrap md:justify-end -m-2">
+                <div class="w-auto p-2">
+                  <a href="#">
+                    <img src="images/Try-risk-free-button6.png" alt="">
+                  </a>
                 </div>
-                <button class="ffff">
-                    <p>Post a Job</p>
+                <div class="w-auto p-2">
+                  <a href="#">
+                    
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+                
+      <section class="relative pt-24 pb-36 bg-black overflow-hidden">
+        <img class="absolute left-1/2 bottom-0 transform -translate-x-1/2" src="gradia-assets/elements/pricing/radial.svg" alt="">
+        <div class="relative z-10 container mx-auto px-4">
+          <div class="mb-20 max-w-xl mx-auto">
+            <h2 class="mb-5 font-heading font-bold text-6xl sm:text-7xl text-white text-center">Straight Forward Pricing</h2>
+            <p class="text-gray-400 text-base text-center">Need a custom plan? Email us at support@ViralReload.com</p>
+          </div>
+          <div class="flex flex-wrap -m-7">
+            <div class="w-full md:w-1/3 p-7">
+              <div class="h-full p-8 border border-gray-800 rounded-10">
+                <div class="flex flex-wrap justify-between border-b border-gray-800 pb-7 mb-7">
+                  <div class="w-full xl:w-auto">
+                    <h3 class="font-heading font-bold text-2xl text-white">Basic</h3>
+                  </div>
+                  <div class="w-full xl:w-auto xl:text-right">
+                    <h3 class="mb-0.5 font-heading font-bold text-2xl text-white">$149/m</h3>
+                    <p class="text-sm text-gray-400">(per user per month)</p>
+                  </div>
+                </div>
+                <ul class="mb-8">
+                  <li class="flex items-center font-heading mb-4 font-medium text-base text-white">
+                    <img class="mr-2.5" src="gradia-assets/elements/pricing/checkbox.svg" alt="">
+                    <p>5 Tikoks accounts posting for you</p>
+                  </li>
+                  <li class="flex items-center font-heading mb-4 font-medium text-base text-white">
+                    <img class="mr-2.5" src="gradia-assets/elements/pricing/checkbox.svg" alt="">
+                    <p>Account Manager</p>
+                  </li>
+                  <li class="flex items-center font-heading mb-4 font-medium text-base text-white">
+                    <img class="mr-2.5" src="gradia-assets/elements/pricing/checkbox.svg" alt="">
+                    <p>1 posts a day each account</p>
+                  </li>
+                  <li class="flex items-center font-heading font-medium text-base text-white">
+                    <img class="mr-2.5" src="gradia-assets/elements/pricing/checkbox.svg" alt="">
+                    <p>Premium Support</p>
+                  </li>
+                </ul>
+                <button class="group relative mb-3 w-full md:w-auto font-heading font-semibold text-xs text-gray-900 uppercase tracking-px overflow-hidden rounded-md">
+                  <div class="absolute top-0 left-0 transform -translate-y-full group-hover:-translate-y-0 h-full w-full bg-black transition ease-in-out duration-500"></div>
+                  <div class="px-9 py-4 bg-white hover:bg-gray-100 overflow-hidden rounded-md">
+                    <p class="relative z-10 group-hover:text-white">Join now</p>
+                  </div>
                 </button>
-
+                <p class="text-sm text-gray-500">
+      </p>
+              </div>
             </div>
-
+            <div class="w-full md:w-1/3 p-7">
+              <div class="h-full p-0.5 bg-gradient-cyan2 border border-gray-800 rounded-10">
+                <div class="p-8 bg-white rounded-10">
+                  <div class="flex flex-wrap justify-between border-b border-gray-200 pb-7 mb-7">
+                    <div class="w-full xl:w-auto">
+                      <h3 class="font-heading font-bold text-2xl text-gray-900">Premium</h3>
+                    </div>
+                    <div class="w-full xl:w-auto xl:text-right">
+                      <h3 class="mb-0.5 font-heading font-bold text-2xl text-gray-900">$289/m</h3>
+                      <p class="text-sm text-gray-400">(per user per month)</p>
+                    </div>
+                  </div>
+                  <ul class="mb-8">
+                    <li class="flex items-center font-heading mb-4 font-medium text-base text-gray-900">
+                      <img class="mr-2.5" src="gradia-assets/elements/pricing/checkbox.svg" alt="">
+                      <p>10 Tiktok accounts posting for you</p>
+                    </li>
+                    <li class="flex items-center font-heading mb-4 font-medium text-base text-gray-900">
+                      <img class="mr-2.5" src="gradia-assets/elements/pricing/checkbox.svg" alt="">
+                      <p>Dedicated Account Manager</p>
+                    </li>
+                    <li class="flex items-center font-heading mb-4 font-medium text-base text-gray-900">
+                      <img class="mr-2.5" src="gradia-assets/elements/pricing/checkbox.svg" alt="">
+                      <p>2 posts a day each account</p>
+                    </li>
+                    <li class="flex items-center font-heading font-medium text-base text-gray-900">
+                      <img class="mr-2.5" src="gradia-assets/elements/pricing/checkbox.svg" alt="">
+                      <p>Premium Support</p>
+                    </li>
+                  </ul>
+                  <button class="group relative mb-3 w-full md:w-auto font-heading font-semibold text-xs text-white uppercase tracking-px overflow-hidden rounded-md">
+                    <div class="absolute top-0 left-0 transform -translate-y-full group-hover:-translate-y-0 h-full w-full bg-white transition ease-in-out duration-500"></div>
+                    <div class="px-9 py-4 bg-gray-900 hover:bg-gray-800 overflow-hidden rounded-md">
+                      <p class="relative z-10 group-hover:text-gray-800">Join now</p>
+                    </div>
+                  </button>
+                  <p class="text-sm text-gray-500">
+      </p>
+                </div>
+              </div>
+            </div>
+            <div class="w-full md:w-1/3 p-7">
+              <div class="h-full p-8 border border-gray-800 rounded-10">
+                <div class="flex flex-wrap justify-between border-b border-gray-800 pb-7 mb-7">
+                  <div class="w-full xl:w-auto">
+                    <h3 class="font-heading font-bold text-2xl text-white">Exclusive</h3>
+                  </div>
+                  <div class="w-full xl:w-auto xl:text-right">
+                    <h3 class="mb-0.5 font-heading font-bold text-2xl text-white">$499/m</h3>
+                    <p class="text-sm text-gray-400">(per user per month)</p>
+                  </div>
+                </div>
+                <ul class="mb-8">
+                  <li class="flex items-center font-heading mb-4 font-medium text-base text-white">
+                    <img class="mr-2.5" src="gradia-assets/elements/pricing/checkbox.svg" alt="">
+                    <p>20 Tiktok accounts posting for you</p>
+                  </li>
+                  <li class="flex items-center font-heading mb-4 font-medium text-base text-white">
+                    <img class="mr-2.5" src="gradia-assets/elements/pricing/checkbox.svg" alt="">
+                    <p>Dedicated Account Manger</p>
+                  </li>
+                  <li class="flex items-center font-heading mb-4 font-medium text-base text-white">
+                    <img class="mr-2.5" src="gradia-assets/elements/pricing/checkbox.svg" alt="">
+                    <p>2 posts a day each account</p>
+                  </li>
+                  <li class="flex items-center font-heading font-medium text-base text-white">
+                    <img class="mr-2.5" src="gradia-assets/elements/pricing/checkbox.svg" alt="">
+                    <p>Premium Support</p>
+                  </li>
+                </ul>
+                <button class="group relative mb-3 w-full md:w-auto font-heading font-semibold text-xs text-gray-900 uppercase tracking-px overflow-hidden rounded-md">
+                  <div class="absolute top-0 left-0 transform -translate-y-full group-hover:-translate-y-0 h-full w-full bg-black transition ease-in-out duration-500"></div>
+                  <div class="px-9 py-4 bg-white hover:bg-gray-100 overflow-hidden rounded-md">
+                    <p class="relative z-10 group-hover:text-white">Join now</p>
+                  </div>
+                </button>
+                <p class="text-sm text-gray-500">
+      </p>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
-
-
-    <section class="wre_course">
-        <div class="custom-container">
-            <div class="custom-row">
-                <div class="col-mds-12">
-                    <p class="white wre_title mb-0">WRE Courses</p>
-                    <h5 class="wre_title">Do an accredited Distance Certification Course</h3>
-                        <a href="" class="apply-now">Apply</a>
+      </section>
+                
+      <section class="relative pt-24 pb-32 bg-black overflow-hidden">
+        <img class="absolute left-1/2 transform -translate-x-1/2 bottom-0" src="gradia-assets/elements/faq/radial.svg" alt="">
+        <div class="relative z-10 container mx-auto px-4">
+          <h2 class="mb-16 font-heading font-semibold text-6xl sm:text-7xl text-white">Frequently Asked Question</h2>
+          <div class="py-9 border-t border-white border-opacity-10">
+            <div class="flex flex-wrap -m-6">
+              <div class="w-full md:w-1/2 p-6">
+                <h3 class="font-heading font-medium text-xl text-white">Can you go into more detail on how it all works?</h3>
+              </div>
+              <div class="w-full md:w-1/2 p-6">
+                <div class="md:max-w-xl">
+                  <p class="text-base text-gray-200">Our Growth Experts will create new accounts for you and repost your content to grow your main accounts! We’ve made effective methods for reposting content. Your account manager uses real phones to download your Tiktok videos each day. Through various methods your videos are scrubbed of any infomation that Tiktok would flag as a duplicate video then they are reuploaded to your various accounts. After signing up all you need to do is continue to create content and watch the growth!</p>
                 </div>
+              </div>
             </div>
+          </div>
+          <div class="py-9 border-t border-white border-opacity-10">
+            <div class="flex flex-wrap -m-6">
+              <div class="w-full md:w-1/2 p-6">
+                <h3 class="font-heading font-medium text-xl text-white">Will this work for me?</h3>
+              </div>
+              <div class="w-full md:w-1/2 p-6">
+                <div class="md:max-w-xl">
+                  <p class="text-base text-gray-200">Most definitely! We are a full-service social media marketing agency that specializes in Short-Form Content. Thousands of accounts have trusted our with their reposting. New and genuine followers will be lead to your account. We know Tiktoks rules like the back of our hand; you are safe with us.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="py-9 border-t border-b border-white border-opacity-10">
+            <div class="flex flex-wrap -m-6">
+              <div class="w-full md:w-1/2 p-6">
+                <h3 class="font-heading font-medium text-xl text-white">Will this service work for me?</h3>
+              </div>
+              <div class="w-full md:w-1/2 p-6">
+                <div class="md:max-w-xl">
+                  <p class="text-base text-gray-200">Definitely! There isn't a nice or business we haven't reposted content for. Influencers, brands, agencies and individuals from around the world trust us for reposting their content.  We have not found an account yet that reposting does not work for!</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
-    <section class="trade_mark">
-        <div class="custom-container">
-            <div class="custom-row align-items-center">
-                <div class="col-mds-6 mb-25">
-                    <div class="mb-3">
-                        <h3 class="blue-title mt-0">Explore the Trades Market</h3>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                            galley of type and
-                        </p>
-                    </div>
-                    <div class="mb-3">
-                        <p class="gray-text">Skills in high demand</p>
-                        <ul class="btn_list">
-                            <li><a href="">Electrician</a></li>
-                            <li><a href="">Weldor</a></li>
-                            <li><a href="">Electrician</a></li>
-                            <li><a href="">Electrician</a></li><br>
-                            <li><a href="">Electrician</a></li>
-                            <li><a href="">Electrician</a></li>
-                            <li><a href="">Electrician</a></li><br>
-                            <li><a href="">Electrician</a></li>
-                            <li><a href="">Electrician</a></li>
-                            <li><a href="">Electrician</a></li>
-                            <li><a href="">Electrician</a></li>
-
-
-                        </ul>
-                    </div>
-                    <div class="mb-3">
-                        <p style="padding: 14px 0px;">Lorem Ipsum is simply dummy text of the printing and typesetting
-                            industry. Lorem Ipsum has
-                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                            galley of type and scrambled it to make a type specimen book. It has survived not only five
-                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
-                            passages, and more recently with desktop publishing software like Aldus PageMaker including
-                            versions of Lorem Ipsum.</p>
-                    </div>
-                    <a href="" class="get_started_btnn">Get Started</a>
-                </div>
-                <div class="col-mds-6">
-                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi7VxYkKBqx_6ttqL9DvbpL5-7t56RzliGdzBNfiik8O1mUls_yEiEtAeThdb8jCOtQM_gSjQTZRi-lDx4ep_vtZJ_0Yj7sbzJCZAmMlq15KPmZHzL-pgplPXbQ5aL0UtzRC_VPQEPhT4Pf8ItUtYtQIn8YY8z47kyUgTbisYOJmu1ycH11ZKCCAs6Kxza5/s1600/Group%20697.png"
-                        class="img-fluid" alt="">
-                </div>
+      </section>
+                
+      <section class="pt-24 pb-32 bg-black overflow-hidden">
+        <div class="container mx-auto px-4">
+          <div class="max-w-lg mx-auto text-center mb-14">
+            <h2 class="mb-5 font-heading font-semibold text-6xl sm:text-7xl text-white">Looking for a custom plan or have questions?</h2>
+            <p class="text-gray-400 text-lg">Don't be shy! Send us a message below we will get right back to you</p>
+          </div>
+          <div class="flex flex-wrap max-w-xl mx-auto -m-2.5">
+            <div class="w-full p-2.5">
+              <input class="w-full px-5 py-4 text-gray-500 text-base bg-transparent border border-gray-800 outline-none focus:ring-4 focus:ring-indigo-500 placeholder-gray-500 rounded" type="text" placeholder="Your full name">
             </div>
+            <div class="w-full p-2.5">
+              <input class="w-full px-5 py-4 text-gray-500 text-base bg-transparent border border-gray-800 outline-none focus:ring-4 focus:ring-indigo-500 placeholder-gray-500 rounded" type="text" placeholder="Your email address">
+            </div>
+            <div class="w-full p-2.5"><textarea class="w-full h-40 px-5 py-4 text-gray-500 text-base bg-transparent border border-gray-800 outline-none focus:ring-4 focus:ring-indigo-500 placeholder-gray-500 resize-none rounded" type="text" placeholder="Write message"></textarea></div>
+            <div class="w-full p-2.5">
+              <div class="group relative">
+                <div class="absolute top-0 left-0 w-full h-full bg-gradient-green opacity-0 group-hover:opacity-50 rounded-lg transition ease-out duration-300"></div>
+                <button class="p-1 w-full font-heading font-semibold text-xs text-gray-900 uppercase tracking-px overflow-hidden rounded-md">
+                  <div class="relative p-5 px-11 bg-gradient-green overflow-hidden rounded-md">
+                    <div class="absolute top-0 left-0 transform -translate-y-full group-hover:-translate-y-0 h-full w-full bg-white transition ease-in-out duration-500"></div>
+                    <p class="relative z-10">Send message</p>
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div class="w-full p-2.5">
+              <p class="text-sm text-gray-500 text-center">
+                <span>By clicking the send button, you agree with our</span>
+                <a class="pb-1 hover:text-gray-400 border-b border-gray-500" href="#">Terms &amp; Conditions</a>
+              </p>
+            </div>
+          </div>
         </div>
-    </section>
-    <section class="wre_course">
-        <div class="custom-container ">
-            <div class="custom-row">
-                <div class="col-mds-12">
-                    <p class="white mb-0" style="font-size: 12px;">Connect with every Trade Community in the world</p>
-                    <h5 class="wre_title">Check out the best career paths</h5>
-                    <a href="" class="apply-now">Explore</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="every-trade">
-        <div class="custom-container ">
-            <div class="custom-row align-items-center">
-                <div class="col-mds-4 ">
-                    <h3 class="blue-title mt-0">Connect with every Trade Community in the World</h3>
-                    <p class="mb-2">Connect For the absolute Career Impact</p>
-                    <a href="" class="get-btn">Get Started</a>
-                </div>
-                <div class="col-mds-6">
-                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi7VxYkKBqx_6ttqL9DvbpL5-7t56RzliGdzBNfiik8O1mUls_yEiEtAeThdb8jCOtQM_gSjQTZRi-lDx4ep_vtZJ_0Yj7sbzJCZAmMlq15KPmZHzL-pgplPXbQ5aL0UtzRC_VPQEPhT4Pf8ItUtYtQIn8YY8z47kyUgTbisYOJmu1ycH11ZKCCAs6Kxza5/s1600/Group%20697.png"
-                        class="img-fluid" alt="">
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="treanding">
-        <div class=" custom-container ">
-            <div class="custom-row">
-                <div class="col-mds-12">
-                    <h2 class="treading-title mt-0">Treading This Week</h2>
-                </div>
-            </div>
-            <div class="custom-row tread">
-                <div class="col-mds-4">
-                    <img class="img-fluid trending-image"
-                        src="https://allnuud.com/static/media/section2.c0e2274f0af9150ef35b.jpg" alt="">
-                    <div class="writting">
-                        <p class="dates-time">june 13 2022</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta eligendi a at esse! Natus,
-                            quos.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-mds-4">
-                    <img class="img-fluid trending-image"
-                        src="https://allnuud.com/static/media/section2.c0e2274f0af9150ef35b.jpg" alt="">
-                    <div class="writting">
-                        <p class="dates-time">june 13 2022</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta eligendi a at esse! Natus,
-                            quos.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-mds-4">
-                    <img class="img-fluid trending-image "
-                        src="https://allnuud.com/static/media/section2.c0e2274f0af9150ef35b.jpg" alt="">
-                    <div class="writting ">
-                        <p class="dates-time">june 13 2022</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta eligendi a at esse! Natus,
-                            quos.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-mds-4">
-                    <img class="img-fluid trending-image "
-                        src="https://allnuud.com/static/media/section2.c0e2274f0af9150ef35b.jpg" alt="">
-                    <div class="writting ">
-                        <p class="dates-time">june 13 2022</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta eligendi a at esse! Natus,
-                            quos.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="slider-dots"></div>
-        </div>
-    </section>
-
-
-
-
-
-
-    <section class="custom-footer">
-        <div class="custom-container">
-            <div class="custom-row smallll">
-                <div class="searchbar-text ">
-                    Be Up to date across industries
-                    <input type="text" class="search-input" placeholder="E-mail">
-                    <button class="search-buttonn">SUBSCRIBE</button>
-                </div>
-            </div>
-
-
-            <div class="custom-footer-titles">
-                <div class="custom-row mobile">
-                    <div class="col-mds-4">
-                        <div class="custom-fotter-logo">
-                            <div class="imggg">
-                                <img class="img-fluid logo"
-                                    src="https://resources.allnuud.com/wp-content/uploads/2023/09/imgpsh_fullsize_anim.png"
-                                    alt="">
-                            </div>
-                            <div class="texttt">
-                                A non profit organisation with a national mission to support Trade skills industry and
-                                all stakeholders.
-                            </div>
-
-                        </div>
-
-
-                    </div>
-                    <div class="col-mds-4 ">
-                        <div class="footermenu">
-                            <div class="servicee">
-                                <ul>
-                                    <h4 class="toppadding">Services</h4>
-                                    <a href="">
-                                        <li class='footer-list'> community </li>
-                                    </a>
-                                    <a href="">
-                                        <li class='footer-list'>Trade Programs</li>
-                                    </a>
-                                    <a href="">
-                                        <li class='footer-list'>trade Job </li>
-                                    </a>
-                                    <a href="">
-                                        <li class='footer-list'>News & Artical</li>
-                                    </a>
-
-                                    </a>
-
-                                </ul>
-
-
-                            </div>
-                            <div class="Popular Link">
-                                <ul>
-                                    <h4 class="toppadding">Popular Link</h4>
-                                    <a href="">
-                                        <li class='footer-list'> Press & Media </li>
-                                    </a>
-                                    <a href="">
-                                        <li class='footer-list'>Online Store </li>
-                                    </a>
-                                    <a href="">
-                                        <li class='footer-list'>About</li>
-                                    </a>
-
-                                    <a href="">
-                                        <li class='footer-list'>FAQ 's</li>
-                                    </a>
-
-                                </ul>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-mds-4">
-                        <div class="contact us">
-                            <ul>
-                                <h4 class="toppadding">conact us</h4>
-                                <i style="padding-right: 15px;" class="fab fa-facebook"></i>
-                                <i style="padding-right: 15px;" class="fab fa-twitter"></i>
-                                <i style="padding-right: 15px;" class="fab fa-youtube"></i>
-                                <i style="padding-right: 15px;" class="fab fa-instagram"></i>
-                                <i style="padding-right: 15px;" class="fa fa-envelope"></i>
-                                <h5 style="padding: 25px 0px;">Get in Touch </h5>
-                                <p>1901 West Girard Ave <br> Philadelphia,PA 13130</p>
-                                <br>
-                                <p>215-381-9403</p>
-
-
-                            </ul>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-
-        </div>
-    </section>
-    <section class="last-footer">
-        <div class="custom-container">
-            <div class="custom-row">
-                <div class="lassssst flex" style="justify-content: space-between;">
-                    <a href="">privacy policy | privacy policy </a>
-                    <p>@2023 work ready education, all rights reserved</p>
-
-                </div>
-
-            </div>
-        </div>
-
-    </section>
-
-
-
-
-    <script>
-        function toggleMenu() {
-            var barNav = document.querySelector('.bar-nav');
-            var toggleButton = document.getElementById('toggleButton');
-            var closeButton = document.getElementById('closeButton');
-
-            if (barNav.style.display === 'flex') {
-                barNav.style.display = 'none';
-                toggleButton.style.display = 'inline-block';
-                closeButton.style.display = 'none';
-            } else {
-                barNav.style.display = 'flex';
-                toggleButton.style.display = 'none';
-                closeButton.style.display = 'inline-block';
-            }
-        }
-
-        function closeMenu() {
-            var barNav = document.querySelector('.bar-nav');
-            var toggleButton = document.getElementById('toggleButton');
-            var closeButton = document.getElementById('closeButton');
-
-            barNav.style.display = 'none';
-            toggleButton.style.display = 'inline-block';
-            closeButton.style.display = 'none';
-        }
-
-
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const treadContainer = document.querySelector('.tread');
-            const items = document.querySelectorAll('.col-mds-4');
-            const dotsContainer = document.querySelector('.slider-dots');
-
-            let currentIndex = 0;
-
-            function showItems() {
-                console.log("Current Index:", currentIndex);
-                treadContainer.style.transform = `translateX(${-currentIndex * 100}%)`;
-            }
-
-            function createDots() {
-                for (let i = 0; i < items.length / 3; i++) {
-                    const dot = document.createElement('div');
-                    dot.classList.add('dot');
-                    dot.setAttribute('data-index', i);
-                    dot.addEventListener('click', () => {
-                        currentIndex = i * 3;
-                        showItems();
-                        updateDots();
-                    });
-                    dotsContainer.appendChild(dot);
-                }
-            }
-
-            function updateDots() {
-                const dots = document.querySelectorAll('.dot');
-                dots.forEach((dot, i) => {
-                    dot.classList.toggle('active', i === currentIndex / 3);
-                });
-            }
-
-            function next() {
-                currentIndex = (currentIndex + 3) % items.length;
-                showItems();
-                updateDots();
-            }
-
-            function prev() {
-                currentIndex = (currentIndex - 3 + items.length) % items.length;
-                showItems();
-                updateDots();
-            }
-
-            createDots();
-            showItems(); // Initial display
-            // setInterval(next, 3000); // Auto-advance every 3 seconds (adjust as needed)
-        });
-    </script>
-    <script>
-        (function () {
-            "use strict";
-
-            var carousels = function () {
-                $(".owl-carousel1").owlCarousel({
-                    loop: true,
-                    center: true,
-                    margin: 0,
-                    responsiveClass: true,
-                    nav: false,
-                    responsive: {
-                        0: {
-                            items: 1,
-                            nav: false
-                        },
-                        680: {
-                            items: 2,
-                            nav: false,
-                            loop: false
-                        },
-                        1000: {
-                            items: 3,
-                            nav: true
-                        }
-                    }
-                });
-            };
-
-            (function ($) {
-                carousels();
-            })(jQuery);
-        })();
-    </script>
-
-    <script>
-        $(document).ready(function () {
-            $(".owl-carousel1").owlCarousel({
-                items: 1,
-                loop: true,
-                autoplay: true,
-                autoplayTimeout: 5000,
-                dots: true,
-            });
-        });
-    </script>
-
-
+      </section>
+    </div>
 </body>
-
 </html>
+
